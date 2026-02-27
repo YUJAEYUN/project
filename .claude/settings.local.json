@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(./gradlew compileKotlin compileTestKotlin --no-daemon)",
+      "Bash(gradle wrapper --gradle-version 8.6)",
+      "Bash(brew list)",
+      "Bash(JAVA_HOME=\"/opt/homebrew/Cellar/openjdk@21/21.0.10/libexec/openjdk.jdk/Contents/Home\" PATH=\"$JAVA_HOME/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin\" ./gradlew compileKotlin --no-daemon)",
+      "Bash(JAVA_HOME=\"/opt/homebrew/Cellar/openjdk@21/21.0.10/libexec/openjdk.jdk/Contents/Home\" PATH=\"$JAVA_HOME/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin\" ./gradlew compileKotlin)"
+    ]
+  }
+}
