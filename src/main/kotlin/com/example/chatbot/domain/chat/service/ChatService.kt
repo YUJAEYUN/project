@@ -17,6 +17,8 @@ import com.example.chatbot.domain.chat.repository.ChatRepository
 import com.example.chatbot.domain.chat.repository.ThreadRepository
 import com.example.chatbot.infrastructure.openai.OpenAiClient
 import com.example.chatbot.infrastructure.openai.dto.OpenAiMessage
+import org.springframework.ai.vectorstore.SearchRequest
+import org.springframework.ai.vectorstore.VectorStore
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.data.domain.PageRequest
 import org.springframework.data.domain.Sort
@@ -38,6 +40,7 @@ class ChatService(
     private val userRepository: UserRepository,
     private val openAiClient: OpenAiClient,
     private val activityLogRepository: ActivityLogRepository,
+    private val vectorStore: VectorStore,
     @Value("\${openai.default-model}") private val defaultModel: String,
 ) {
     @Transactional
@@ -147,8 +150,19 @@ class ChatService(
     }
 
     private fun buildMessages(history: List<Chat>, currentQuestion: String): List<OpenAiMessage> {
+        val relevantDocs = vectorStore.similaritySearch(
+            SearchRequest.builder().query(currentQuestion).topK(3).build()
+        ) ?: emptyList()
+
+        val systemContent = if (relevantDocs.isEmpty()) {
+            SYSTEM_PROMPT
+        } else {
+            val context = relevantDocs.joinToString("\n\n---\n\n") { it.text.orEmpty() }
+            "$SYSTEM_PROMPT\n\n아래 참고 문서를 기반으로 답변하세요:\n\n$context"
+        }
+
         val messages = mutableListOf<OpenAiMessage>()
-        messages.add(OpenAiMessage(role = "system", content = SYSTEM_PROMPT))
+        messages.add(OpenAiMessage(role = "system", content = systemContent))
         history.forEach { chat ->
             messages.add(OpenAiMessage(role = "user", content = chat.question))
             messages.add(OpenAiMessage(role = "assistant", content = chat.answer))

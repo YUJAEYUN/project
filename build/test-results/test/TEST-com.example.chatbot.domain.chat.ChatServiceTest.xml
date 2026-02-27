@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.chatbot.domain.chat.ChatServiceTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-02-27T04:32:59" hostname="userui-MacBookPro.local" time="0.119">
+<testsuite name="com.example.chatbot.domain.chat.ChatServiceTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-02-27T04:59:59" hostname="userui-MacBookPro.local" time="0.142">
   <properties/>
-  <testcase name="30분 초과 - 새 스레드 생성()" classname="com.example.chatbot.domain.chat.ChatServiceTest" time="0.092"/>
+  <testcase name="30분 초과 - 새 스레드 생성()" classname="com.example.chatbot.domain.chat.ChatServiceTest" time="0.114"/>
   <testcase name="ADMIN은 타인 스레드 삭제 가능()" classname="com.example.chatbot.domain.chat.ChatServiceTest" time="0.002"/>
-  <testcase name="이전 대화 히스토리가 messages에 포함된다()" classname="com.example.chatbot.domain.chat.ChatServiceTest" time="0.007"/>
+  <testcase name="이전 대화 히스토리가 messages에 포함된다()" classname="com.example.chatbot.domain.chat.ChatServiceTest" time="0.008"/>
   <testcase name="첫 질문 - 스레드가 없으면 새 스레드 생성()" classname="com.example.chatbot.domain.chat.ChatServiceTest" time="0.003"/>
-  <testcase name="OpenAI 오류 시 OpenAiException 발생()" classname="com.example.chatbot.domain.chat.ChatServiceTest" time="0.002"/>
+  <testcase name="OpenAI 오류 시 OpenAiException 발생()" classname="com.example.chatbot.domain.chat.ChatServiceTest" time="0.001"/>
   <testcase name="타인 스레드 삭제 시도 - MEMBER - ForbiddenException()" classname="com.example.chatbot.domain.chat.ChatServiceTest" time="0.001"/>
-  <testcase name="30분 이내 - 기존 스레드 재사용()" classname="com.example.chatbot.domain.chat.ChatServiceTest" time="0.002"/>
+  <testcase name="30분 이내 - 기존 스레드 재사용()" classname="com.example.chatbot.domain.chat.ChatServiceTest" time="0.003"/>
   <testcase name="정상 대화 생성 성공()" classname="com.example.chatbot.domain.chat.ChatServiceTest" time="0.002"/>
   <testcase name="존재하지 않는 스레드 삭제 - ThreadNotFoundException()" classname="com.example.chatbot.domain.chat.ChatServiceTest" time="0.001"/>
   <testcase name="정확히 30분 경계값 - 새 스레드 생성()" classname="com.example.chatbot.domain.chat.ChatServiceTest" time="0.003"/>

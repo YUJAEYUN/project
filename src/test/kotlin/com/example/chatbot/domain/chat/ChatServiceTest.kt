@@ -14,6 +14,8 @@ import com.example.chatbot.domain.chat.service.ChatService
 import com.example.chatbot.infrastructure.openai.OpenAiClient
 import io.mockk.*
 import org.assertj.core.api.Assertions.assertThat
+import org.springframework.ai.vectorstore.SearchRequest
+import org.springframework.ai.vectorstore.VectorStore
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
@@ -27,10 +29,11 @@ class ChatServiceTest {
     private val userRepository: UserRepository = mockk()
     private val openAiClient: OpenAiClient = mockk()
     private val activityLogRepository: ActivityLogRepository = mockk()
+    private val vectorStore: VectorStore = mockk()
     private val defaultModel = "gpt-4o-mini"
 
     private val chatService = ChatService(
-        threadRepository, chatRepository, userRepository, openAiClient, activityLogRepository, defaultModel
+        threadRepository, chatRepository, userRepository, openAiClient, activityLogRepository, vectorStore, defaultModel
     )
 
     private val user = TestFixtures.createUser()
@@ -38,6 +41,7 @@ class ChatServiceTest {
     @BeforeEach
     fun setUp() {
         every { userRepository.findById(user.id) } returns Optional.of(user)
+        every { vectorStore.similaritySearch(any<SearchRequest>()) } returns emptyList()
     }
 
     // ─── 스레드 결정 로직 ────────────────────────────────────────

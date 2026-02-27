@@ -16,3 +16,6 @@ spring:
     console:
       enabled: true
       path: /h2-console
+  autoconfigure:
+    exclude:
+      - org.springframework.ai.autoconfigure.vectorstore.pgvector.PgVectorStoreAutoConfiguration

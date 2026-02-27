@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.chatbot.domain.auth.JwtProviderTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-02-27T04:32:58" hostname="userui-MacBookPro.local" time="0.034">
+<testsuite name="com.example.chatbot.domain.auth.JwtProviderTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-02-27T04:59:58" hostname="userui-MacBookPro.local" time="0.044">
   <properties/>
-  <testcase name="변조된 토큰 검증 실패()" classname="com.example.chatbot.domain.auth.JwtProviderTest" time="0.029"/>
+  <testcase name="변조된 토큰 검증 실패()" classname="com.example.chatbot.domain.auth.JwtProviderTest" time="0.039"/>
   <testcase name="토큰 생성 후 파싱 성공()" classname="com.example.chatbot.domain.auth.JwtProviderTest" time="0.003"/>
   <testcase name="잘못된 형식의 토큰 검증 실패()" classname="com.example.chatbot.domain.auth.JwtProviderTest" time="0.0"/>
   <testcase name="만료된 토큰 검증 실패()" classname="com.example.chatbot.domain.auth.JwtProviderTest" time="0.001"/>
