@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.102s</div>
+<div class="counter">0.116s</div>
 <p>duration</p>
 </div>
 </td>
@@ -84,12 +84,12 @@
 </tr>
 <tr>
 <td class="success">ADMIN 피드백 상태 변경 성공 - 200()</td>
-<td class="success">0.022s</td>
+<td class="success">0.026s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">MEMBER 본인 피드백 목록 조회()</td>
-<td class="success">0.006s</td>
+<td class="success">0.008s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -109,17 +109,17 @@
 </tr>
 <tr>
 <td class="success">isPositive true 필터()</td>
-<td class="success">0.006s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">동일 대화 중복 피드백 - 409()</td>
-<td class="success">0.002s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">본인 대화 피드백 생성 성공 - 201()</td>
-<td class="success">0.027s</td>
+<td class="success">0.030s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -129,17 +129,17 @@
 </tr>
 <tr>
 <td class="success">존재하지 않는 chatId - 404()</td>
-<td class="success">0.002s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">존재하지 않는 feedbackId - 404()</td>
-<td class="success">0.002s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">페이지네이션 동작()</td>
-<td class="success">0.013s</td>
+<td class="success">0.014s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -147,8 +147,8 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2026-02-27T13:59:59.668+09:00  INFO 31620 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.chatbot.domain.feedback.FeedbackControllerTest]: FeedbackControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-02-27T13:59:59.678+09:00  INFO 31620 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.chatbot.ChatbotApplication for test class com.example.chatbot.domain.feedback.FeedbackControllerTest
+<pre>2026-02-27T14:19:11.064+09:00  INFO 34013 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.chatbot.domain.feedback.FeedbackControllerTest]: FeedbackControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-27T14:19:11.084+09:00  INFO 34013 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.chatbot.ChatbotApplication for test class com.example.chatbot.domain.feedback.FeedbackControllerTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -159,19 +159,19 @@
 
  :: Spring Boot ::                (v3.3.6)
 
-2026-02-27T13:59:59.688+09:00  INFO 31620 --- [    Test worker] c.e.c.d.feedback.FeedbackControllerTest  : Starting FeedbackControllerTest using Java 21.0.10 with PID 31620 (started by user in /Users/user/Desktop/project)
-2026-02-27T13:59:59.688+09:00  INFO 31620 --- [    Test worker] c.e.c.d.feedback.FeedbackControllerTest  : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2026-02-27T13:59:59.778+09:00  WARN 31620 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+2026-02-27T14:19:11.100+09:00  INFO 34013 --- [    Test worker] c.e.c.d.feedback.FeedbackControllerTest  : Starting FeedbackControllerTest using Java 21.0.10 with PID 34013 (started by user in /Users/user/Desktop/project)
+2026-02-27T14:19:11.100+09:00  INFO 34013 --- [    Test worker] c.e.c.d.feedback.FeedbackControllerTest  : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2026-02-27T14:19:11.260+09:00  WARN 34013 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: 9c26cafc-fa17-45c6-b462-13f5c50350d4
+Using generated security password: 183e95d9-78e0-4c9c-921a-8e1a40b5582e
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2026-02-27T13:59:59.779+09:00  INFO 31620 --- [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-02-27T13:59:59.822+09:00  INFO 31620 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-02-27T13:59:59.822+09:00  INFO 31620 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-02-27T13:59:59.822+09:00  INFO 31620 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2026-02-27T13:59:59.825+09:00  INFO 31620 --- [    Test worker] c.e.c.d.feedback.FeedbackControllerTest  : Started FeedbackControllerTest in 0.144 seconds (process running for 3.976)
+2026-02-27T14:19:11.261+09:00  INFO 34013 --- [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-02-27T14:19:11.312+09:00  INFO 34013 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-02-27T14:19:11.312+09:00  INFO 34013 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-27T14:19:11.312+09:00  INFO 34013 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-02-27T14:19:11.316+09:00  INFO 34013 --- [    Test worker] c.e.c.d.feedback.FeedbackControllerTest  : Started FeedbackControllerTest in 0.229 seconds (process running for 7.495)
 </pre>
 </span>
 </div>
@@ -183,7 +183,7 @@ This generated password is for development use only. Your security configuration
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.6</a> at 2026. 2. 27. 오후 1:59:59</p>
+<a href="http://www.gradle.org">Gradle 8.6</a> at 2026. 2. 27. 오후 2:19:13</p>
 </div>
 </div>
 </body>

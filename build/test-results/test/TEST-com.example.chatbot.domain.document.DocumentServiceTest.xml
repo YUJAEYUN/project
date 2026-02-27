@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.chatbot.domain.document.DocumentServiceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-02-27T04:59:59" hostname="userui-MacBookPro.local" time="0.202">
+<testsuite name="com.example.chatbot.domain.document.DocumentServiceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-02-27T05:19:10" hostname="userui-MacBookPro.local" time="0.194">
   <properties/>
-  <testcase name="정상 문서 업로드 - 청킹 후 벡터스토어에 저장()" classname="com.example.chatbot.domain.document.DocumentServiceTest" time="0.088"/>
+  <testcase name="정상 문서 업로드 - 청킹 후 벡터스토어에 저장()" classname="com.example.chatbot.domain.document.DocumentServiceTest" time="0.074"/>
   <testcase name="문서 목록 조회 - 저장된 문서 없으면 빈 리스트()" classname="com.example.chatbot.domain.document.DocumentServiceTest" time="0.001"/>
   <testcase name="문서 목록 조회 - 저장된 문서 반환()" classname="com.example.chatbot.domain.document.DocumentServiceTest" time="0.001"/>
-  <testcase name="500자 초과 내용은 contentPreview가 500자로 잘림()" classname="com.example.chatbot.domain.document.DocumentServiceTest" time="0.057"/>
-  <testcase name="짧은 내용 문서 - 단일 청크로 저장()" classname="com.example.chatbot.domain.document.DocumentServiceTest" time="0.055"/>
+  <testcase name="500자 초과 내용은 contentPreview가 500자로 잘림()" classname="com.example.chatbot.domain.document.DocumentServiceTest" time="0.063"/>
+  <testcase name="짧은 내용 문서 - 단일 청크로 저장()" classname="com.example.chatbot.domain.document.DocumentServiceTest" time="0.053"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

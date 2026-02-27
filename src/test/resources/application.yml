@@ -16,7 +16,7 @@ spring:
       api-key: test-api-key
   autoconfigure:
     exclude:
-      - org.springframework.ai.autoconfigure.vectorstore.pgvector.PgVectorStoreAutoConfiguration
+      - org.springframework.ai.vectorstore.pgvector.autoconfigure.PgVectorStoreAutoConfiguration
 
 openai:
   api-key: test-api-key

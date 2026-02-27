@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.chatbot.domain.chat.ChatControllerTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-02-27T04:59:58" hostname="userui-MacBookPro.local" time="0.19">
+<testsuite name="com.example.chatbot.domain.chat.ChatControllerTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-02-27T05:19:10" hostname="userui-MacBookPro.local" time="0.183">
   <properties/>
   <testcase name="OpenAI 오류 - 502()" classname="com.example.chatbot.domain.chat.ChatControllerTest" time="0.033"/>
-  <testcase name="페이지네이션 파라미터 동작()" classname="com.example.chatbot.domain.chat.ChatControllerTest" time="0.087"/>
-  <testcase name="정상 non-streaming 대화 생성 - 200()" classname="com.example.chatbot.domain.chat.ChatControllerTest" time="0.006"/>
+  <testcase name="페이지네이션 파라미터 동작()" classname="com.example.chatbot.domain.chat.ChatControllerTest" time="0.094"/>
+  <testcase name="정상 non-streaming 대화 생성 - 200()" classname="com.example.chatbot.domain.chat.ChatControllerTest" time="0.005"/>
   <testcase name="question 누락 - 400()" classname="com.example.chatbot.domain.chat.ChatControllerTest" time="0.003"/>
-  <testcase name="MEMBER 본인 스레드 목록 조회()" classname="com.example.chatbot.domain.chat.ChatControllerTest" time="0.007"/>
-  <testcase name="ADMIN 타인 스레드 삭제 - 204()" classname="com.example.chatbot.domain.chat.ChatControllerTest" time="0.022"/>
-  <testcase name="본인 스레드 삭제 - 204()" classname="com.example.chatbot.domain.chat.ChatControllerTest" time="0.008"/>
-  <testcase name="타인 스레드 삭제 시도 MEMBER - 403()" classname="com.example.chatbot.domain.chat.ChatControllerTest" time="0.005"/>
+  <testcase name="MEMBER 본인 스레드 목록 조회()" classname="com.example.chatbot.domain.chat.ChatControllerTest" time="0.006"/>
+  <testcase name="ADMIN 타인 스레드 삭제 - 204()" classname="com.example.chatbot.domain.chat.ChatControllerTest" time="0.02"/>
+  <testcase name="본인 스레드 삭제 - 204()" classname="com.example.chatbot.domain.chat.ChatControllerTest" time="0.003"/>
+  <testcase name="타인 스레드 삭제 시도 MEMBER - 403()" classname="com.example.chatbot.domain.chat.ChatControllerTest" time="0.003"/>
   <testcase name="인증 없음 - 401()" classname="com.example.chatbot.domain.chat.ChatControllerTest" time="0.002"/>
   <testcase name="존재하지 않는 스레드 삭제 - 404()" classname="com.example.chatbot.domain.chat.ChatControllerTest" time="0.003"/>
   <testcase name="DELETE thread 인증 없음 - 401()" classname="com.example.chatbot.domain.chat.ChatControllerTest" time="0.002"/>
-  <testcase name="GET chats 인증 없음 - 401()" classname="com.example.chatbot.domain.chat.ChatControllerTest" time="0.002"/>
-  <testcase name="커스텀 model 파라미터 적용()" classname="com.example.chatbot.domain.chat.ChatControllerTest" time="0.003"/>
-  <system-out><![CDATA[2026-02-27T13:59:58.591+09:00  INFO 31620 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.chatbot.domain.chat.ChatControllerTest]: ChatControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-02-27T13:59:58.604+09:00  INFO 31620 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.chatbot.ChatbotApplication for test class com.example.chatbot.domain.chat.ChatControllerTest
+  <testcase name="GET chats 인증 없음 - 401()" classname="com.example.chatbot.domain.chat.ChatControllerTest" time="0.001"/>
+  <testcase name="커스텀 model 파라미터 적용()" classname="com.example.chatbot.domain.chat.ChatControllerTest" time="0.004"/>
+  <system-out><![CDATA[2026-02-27T14:19:09.823+09:00  INFO 34013 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.chatbot.domain.chat.ChatControllerTest]: ChatControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-27T14:19:09.847+09:00  INFO 34013 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.chatbot.ChatbotApplication for test class com.example.chatbot.domain.chat.ChatControllerTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -26,19 +26,19 @@
 
  :: Spring Boot ::                (v3.3.6)
 
-2026-02-27T13:59:58.615+09:00  INFO 31620 --- [    Test worker] c.e.c.domain.chat.ChatControllerTest     : Starting ChatControllerTest using Java 21.0.10 with PID 31620 (started by user in /Users/user/Desktop/project)
-2026-02-27T13:59:58.615+09:00  INFO 31620 --- [    Test worker] c.e.c.domain.chat.ChatControllerTest     : No active profile set, falling back to 1 default profile: "default"
-2026-02-27T13:59:58.721+09:00  WARN 31620 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+2026-02-27T14:19:09.863+09:00  INFO 34013 --- [    Test worker] c.e.c.domain.chat.ChatControllerTest     : Starting ChatControllerTest using Java 21.0.10 with PID 34013 (started by user in /Users/user/Desktop/project)
+2026-02-27T14:19:09.863+09:00  INFO 34013 --- [    Test worker] c.e.c.domain.chat.ChatControllerTest     : No active profile set, falling back to 1 default profile: "default"
+2026-02-27T14:19:10.031+09:00  WARN 34013 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: dfb5e9f3-48d9-4b0a-ad2b-8147f87783b5
+Using generated security password: cbd17b4f-1266-4536-83d8-0b271ee412aa
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2026-02-27T13:59:58.721+09:00  INFO 31620 --- [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-02-27T13:59:58.770+09:00  INFO 31620 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-02-27T13:59:58.770+09:00  INFO 31620 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-02-27T13:59:58.770+09:00  INFO 31620 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2026-02-27T13:59:58.775+09:00  INFO 31620 --- [    Test worker] c.e.c.domain.chat.ChatControllerTest     : Started ChatControllerTest in 0.167 seconds (process running for 2.925)
+2026-02-27T14:19:10.032+09:00  INFO 34013 --- [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-02-27T14:19:10.081+09:00  INFO 34013 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-02-27T14:19:10.081+09:00  INFO 34013 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-27T14:19:10.081+09:00  INFO 34013 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-02-27T14:19:10.085+09:00  INFO 34013 --- [    Test worker] c.e.c.domain.chat.ChatControllerTest     : Started ChatControllerTest in 0.235 seconds (process running for 6.264)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.049s</div>
+<div class="counter">0.053s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,37 +79,37 @@
 </thead>
 <tr>
 <td class="success">ADMIN 문서 목록 조회 성공 - 200()</td>
-<td class="success">0.007s</td>
+<td class="success">0.005s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">ADMIN 문서 업로드 성공 - 201()</td>
-<td class="success">0.022s</td>
+<td class="success">0.026s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">MEMBER 문서 목록 조회 시 403()</td>
-<td class="success">0.001s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">MEMBER 문서 업로드 시 403()</td>
-<td class="success">0.008s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">빈 content로 요청 시 400()</td>
-<td class="success">0.002s</td>
+<td class="success">0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">빈 name으로 요청 시 400()</td>
-<td class="success">0.006s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">인증 없이 문서 목록 조회 시 401()</td>
-<td class="success">0.002s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -122,8 +122,8 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2026-02-27T13:59:59.212+09:00  INFO 31620 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.chatbot.domain.document.DocumentControllerTest]: DocumentControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-02-27T13:59:59.222+09:00  INFO 31620 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.chatbot.ChatbotApplication for test class com.example.chatbot.domain.document.DocumentControllerTest
+<pre>2026-02-27T14:19:10.533+09:00  INFO 34013 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.chatbot.domain.document.DocumentControllerTest]: DocumentControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-27T14:19:10.551+09:00  INFO 34013 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.chatbot.ChatbotApplication for test class com.example.chatbot.domain.document.DocumentControllerTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -134,19 +134,19 @@
 
  :: Spring Boot ::                (v3.3.6)
 
-2026-02-27T13:59:59.231+09:00  INFO 31620 --- [    Test worker] c.e.c.d.document.DocumentControllerTest  : Starting DocumentControllerTest using Java 21.0.10 with PID 31620 (started by user in /Users/user/Desktop/project)
-2026-02-27T13:59:59.231+09:00  INFO 31620 --- [    Test worker] c.e.c.d.document.DocumentControllerTest  : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2026-02-27T13:59:59.343+09:00  WARN 31620 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+2026-02-27T14:19:10.565+09:00  INFO 34013 --- [    Test worker] c.e.c.d.document.DocumentControllerTest  : Starting DocumentControllerTest using Java 21.0.10 with PID 34013 (started by user in /Users/user/Desktop/project)
+2026-02-27T14:19:10.565+09:00  INFO 34013 --- [    Test worker] c.e.c.d.document.DocumentControllerTest  : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2026-02-27T14:19:10.726+09:00  WARN 34013 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: db039754-be40-443b-aa3a-cb0d37e4f49c
+Using generated security password: dba7a9cc-430e-4316-8632-04426150d485
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2026-02-27T13:59:59.344+09:00  INFO 31620 --- [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-02-27T13:59:59.385+09:00  INFO 31620 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-02-27T13:59:59.386+09:00  INFO 31620 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-02-27T13:59:59.386+09:00  INFO 31620 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2026-02-27T13:59:59.389+09:00  INFO 31620 --- [    Test worker] c.e.c.d.document.DocumentControllerTest  : Started DocumentControllerTest in 0.165 seconds (process running for 3.54)
+2026-02-27T14:19:10.727+09:00  INFO 34013 --- [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-02-27T14:19:10.774+09:00  INFO 34013 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-02-27T14:19:10.774+09:00  INFO 34013 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-27T14:19:10.774+09:00  INFO 34013 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-02-27T14:19:10.778+09:00  INFO 34013 --- [    Test worker] c.e.c.d.document.DocumentControllerTest  : Started DocumentControllerTest in 0.224 seconds (process running for 6.957)
 </pre>
 </span>
 </div>
@@ -158,7 +158,7 @@ This generated password is for development use only. Your security configuration
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.6</a> at 2026. 2. 27. 오후 1:59:59</p>
+<a href="http://www.gradle.org">Gradle 8.6</a> at 2026. 2. 27. 오후 2:19:13</p>
 </div>
 </div>
 </body>

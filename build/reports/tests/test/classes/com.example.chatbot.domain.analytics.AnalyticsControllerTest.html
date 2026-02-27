@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.190s</div>
+<div class="counter">0.109s</div>
 <p>duration</p>
 </div>
 </td>
@@ -66,9 +66,6 @@
 <li>
 <a href="#tab1">Standard output</a>
 </li>
-<li>
-<a href="#tab2">Standard error</a>
-</li>
 </ul>
 <div id="tab0" class="tab">
 <h2>Tests</h2>
@@ -87,7 +84,7 @@
 </tr>
 <tr>
 <td class="success">ADMIN 활동 통계 조회 성공 - 200()</td>
-<td class="success">0.050s</td>
+<td class="success">0.068s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -97,22 +94,22 @@
 </tr>
 <tr>
 <td class="success">MEMBER CSV 보고서 접근 - 403()</td>
-<td class="success">0.002s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">MEMBER 활동 통계 접근 - 403()</td>
-<td class="success">0.022s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">응답에 from-to 24시간 범위 포함 확인()</td>
 <td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">MEMBER 활동 통계 접근 - 403()</td>
+<td class="success">0.010s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">응답에 from-to 24시간 범위 포함 확인()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">인증 없이 활동 통계 접근 - 401()</td>
-<td class="success">0.105s</td>
+<td class="success">0.015s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -120,8 +117,8 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>13:59:56.157 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.chatbot.domain.analytics.AnalyticsControllerTest]: AnalyticsControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-13:59:56.289 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.chatbot.ChatbotApplication for test class com.example.chatbot.domain.analytics.AnalyticsControllerTest
+<pre>2026-02-27T14:19:08.373+09:00  INFO 34013 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.chatbot.domain.analytics.AnalyticsControllerTest]: AnalyticsControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-27T14:19:08.386+09:00  INFO 34013 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.chatbot.ChatbotApplication for test class com.example.chatbot.domain.analytics.AnalyticsControllerTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -132,29 +129,19 @@
 
  :: Spring Boot ::                (v3.3.6)
 
-2026-02-27T13:59:56.452+09:00  INFO 31620 --- [    Test worker] c.e.c.d.a.AnalyticsControllerTest        : Starting AnalyticsControllerTest using Java 21.0.10 with PID 31620 (started by user in /Users/user/Desktop/project)
-2026-02-27T13:59:56.453+09:00  INFO 31620 --- [    Test worker] c.e.c.d.a.AnalyticsControllerTest        : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2026-02-27T13:59:57.207+09:00  WARN 31620 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+2026-02-27T14:19:08.399+09:00  INFO 34013 --- [    Test worker] c.e.c.d.a.AnalyticsControllerTest        : Starting AnalyticsControllerTest using Java 21.0.10 with PID 34013 (started by user in /Users/user/Desktop/project)
+2026-02-27T14:19:08.399+09:00  INFO 34013 --- [    Test worker] c.e.c.d.a.AnalyticsControllerTest        : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2026-02-27T14:19:08.685+09:00  WARN 34013 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: a057e222-9393-4e8e-b966-2f326d04d039
+Using generated security password: 00382062-34e5-4164-ac31-8de96f302e7a
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2026-02-27T13:59:57.210+09:00  INFO 31620 --- [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-02-27T13:59:57.424+09:00  INFO 31620 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-02-27T13:59:57.424+09:00  INFO 31620 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-02-27T13:59:57.425+09:00  INFO 31620 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2026-02-27T13:59:57.460+09:00  INFO 31620 --- [    Test worker] c.e.c.d.a.AnalyticsControllerTest        : Started AnalyticsControllerTest in 1.116 seconds (process running for 1.611)
-</pre>
-</span>
-</div>
-<div id="tab2" class="tab">
-<h2>Standard error</h2>
-<span class="code">
-<pre>WARNING: A Java agent has been loaded dynamically (/Users/user/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.19/154da3a65b4f4a909d3e5bdec55d1b2b4cbb6ce1/byte-buddy-agent-1.14.19.jar)
-WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
-WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
-WARNING: Dynamic loading of agents will be disallowed by default in a future release
+2026-02-27T14:19:08.687+09:00  INFO 34013 --- [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-02-27T14:19:08.782+09:00  INFO 34013 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-02-27T14:19:08.782+09:00  INFO 34013 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-27T14:19:08.782+09:00  INFO 34013 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-02-27T14:19:08.793+09:00  INFO 34013 --- [    Test worker] c.e.c.d.a.AnalyticsControllerTest        : Started AnalyticsControllerTest in 0.401 seconds (process running for 4.972)
 </pre>
 </span>
 </div>
@@ -166,7 +153,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.6</a> at 2026. 2. 27. 오후 1:59:59</p>
+<a href="http://www.gradle.org">Gradle 8.6</a> at 2026. 2. 27. 오후 2:19:13</p>
 </div>
 </div>
 </body>

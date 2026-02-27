@@ -29,12 +29,8 @@ class ChatController(
     private val chatService: ChatService,
 ) {
     @Operation(
-        summary = "대화 생성",
-        description = """
-        질문을 입력받고 AI 답변을 생성합니다.
-        - `isStreaming=false` (기본): JSON 응답
-        - `isStreaming=true`: SSE(text/event-stream) 응답
-        """
+        summary = "대화 생성 (JSON)",
+        description = "질문을 입력받고 AI 답변을 JSON으로 반환합니다."
     )
     @ApiResponses(
         ApiResponse(responseCode = "201", description = "대화 생성 성공"),
@@ -47,19 +43,32 @@ class ChatController(
             content = [Content(schema = Schema(implementation = ErrorResponse::class))]
         ),
     )
-    @PostMapping("/chats", produces = [MediaType.APPLICATION_JSON_VALUE, MediaType.TEXT_EVENT_STREAM_VALUE])
+    @PostMapping("/chats", produces = [MediaType.APPLICATION_JSON_VALUE])
+    @ResponseStatus(HttpStatus.CREATED)
     fun createChat(
         @Valid @RequestBody request: CreateChatRequest,
-    ): Any {
+    ): ChatResponse {
         val userId = SecurityUtil.getCurrentUserId()
+        return chatService.createChat(userId, request)
+    }
 
-        return if (request.isStreaming) {
-            createStreamingResponse(userId, request)
-        } else {
-            chatService.createChat(userId, request).also {
-                // HTTP 201 for non-streaming is handled by ResponseStatus
-            }
-        }
+    @Operation(
+        summary = "대화 생성 (SSE 스트리밍)",
+        description = "질문을 입력받고 AI 답변을 SSE(text/event-stream)로 스트리밍합니다."
+    )
+    @ApiResponses(
+        ApiResponse(responseCode = "200", description = "스트리밍 시작"),
+        ApiResponse(
+            responseCode = "400", description = "question 누락",
+            content = [Content(schema = Schema(implementation = ErrorResponse::class))]
+        ),
+    )
+    @PostMapping("/chats/stream", produces = [MediaType.TEXT_EVENT_STREAM_VALUE])
+    fun createChatStream(
+        @Valid @RequestBody request: CreateChatRequest,
+    ): SseEmitter {
+        val userId = SecurityUtil.getCurrentUserId()
+        return createStreamingResponse(userId, request)
     }
 
     private fun createStreamingResponse(userId: UUID, request: CreateChatRequest): SseEmitter {
