@@ -4,6 +4,19 @@ Kotlin 1.9 + Spring Boot 3.2 기반 AI 챗봇 REST API 서버입니다.
 
 ---
 
+## 📄 문서 목록
+
+프로젝트와 관련된 주요 문서는 [`docs/`](./docs) 폴더에 있습니다.
+
+| 문서 | 설명 |
+|------|------|
+| [`PRD.md`](./docs/PRD.md) | 제품 요구사항 정의서. 도메인 모델, API 명세, 보안 정책, 확장 계획 포함 |
+| [`DEVELOPMENT_GUIDE.md`](./docs/DEVELOPMENT_GUIDE.md) | 개발 가이드. 프로젝트 세팅, 코딩 컨벤션, 브랜치 전략 등 |
+| [`HANDOVER.md`](./docs/HANDOVER.md) | 클라이언트 전달용 문서. 실행 방법, API 사용법, 구현 완료 기능 목록 |
+| [`RETROSPECTIVE.md`](./docs/RETROSPECTIVE.md) | 과제 전형 회고. 과제 분석 과정, AI 활용 방법, 트러블슈팅 경험 정리 |
+
+---
+
 ## 기술 스택
 
 | 항목 | 내용 |
